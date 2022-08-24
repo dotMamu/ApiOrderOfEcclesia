@@ -1,0 +1,74 @@
+Name;Description;Type;Attributes;Statistics;Found;Consume;Notes
+Confodere;A rapier glyph.;Glyph (Rapier);Attrib: Slash;ATK +6;Find: First given in tutorial with Barlowe.;Consume: 5 MP ;
+Vol Confodere;A powerful rapier glyph.;Glyph (Rapier);Attrib: Slash;ATK +11;Drop: Dullahan (10%);Consume: 10 MP ;
+Melio Confodere;Superior rapier glyph.;Glyph (Rapier);Attrib: Slash;ATK +15;Find: Library (Dracula's Castle);Consume: 15 MP ;
+Secare;A sword glyph.;Glyph (Sword);Attrib: Slash;ATK +8;Drop: Bone Scimitar;Consume: 8 MP ;
+Vol Secare;A powerful sword glyph.;Glyph (Sword);Attrib: Slash;ATK +14;Find: Giant's Dwelling;Consume: 10 MP ;
+Melio Secare;Superior sword glyph.;Glyph (Sword);Attrib: Slash;ATK +20;Drop: Spectral Sword;Consume: 15 MP ;
+Hasta;A lance glyph.;Glyph (Lance);Attrib: Slash;ATK +9;Drop: Spear Guard;Consume: 5 MP ;
+Vol Hasta;A powerful lance glyph.;Glyph (Lance);Attrib: Slash;ATK +16;Find: Tristis Pass;Consume: 10 MP ;
+Melio Hasta;Superior lance glyph.;Glyph (Lance);Attrib: Slash;ATK +23;Find: Barracks (Dracula's Castle);Consume: 15 MP ;
+Macir;A hammer glyph.;Glyph (Hammer);Attrib: Strike;ATK +10;Find: Monastery;Consume: 5 MP ;
+Vol Macir;A powerful hammer glyph.;Glyph (Hammer);Attrib: Strike;ATK +18;Find: Misty Forest Road (...);Consume: 10 MP ;
+Melio Macir;Superior hammer glyph.;Glyph (Hammer);Attrib: Strike;ATK +25;Drop: Hammer Shaker;Consume: 15 MP ;
+Arcus;A bow glyph.;Glyph (Bow);Attrib: Slash;ATK +6;Drop: Bone Archer;Consume: 15 MP ;
+Vol Arcus;This bow glyph fires diagonally.;Glyph (Bow);Attrib: Slash;ATK +9;Find: Somnus Reef;Consume: 15 MP ;
+Melio Arcus;A bow glyph that targets enemies automatically.;Glyph (Bow);Attrib: Slash;ATK +9;Find: Misty Forest Road;Consume: 25 MP ;
+Ascia;An axe glyph.;Glyph (Axe);Attrib: Slash;ATK +8;Find: Ruvas Forest, Minera Prison Island, Monastery (Hard Mode) , Drop: Axe Knight;Consume: 15 MP ;Effect: Arc Throw
+Vol Ascia;A powerful axe glyph.;Glyph (Axe);Attrib: Slash;ATK +12;Find: Somnus Reef;Consume: 30 MP ;Effect: Arc Throw
+Melio Ascia;Superior axe glyph.;Glyph (Axe);Attrib: Slash;ATK +16;Drop: Great Knight;Consume: 45 MP ;Effect: Arc Throw
+Falcis;A sickle glyph.;Glyph (Sickle);Attrib: Slash;ATK +11;Find: Minera Prison Island;Consume: 5 MP ;
+Vol Falcis;A powerful sickle glyph.;Glyph (Sickle);Attrib: Slash;ATK +19;Drop: Miss Murder;Consume: 10 MP ;
+Melio Falcis;Superior sickle glyph.;Glyph (Sickle);Attrib: Slash;ATK +28;Find: Arms Depot (Dracula's Castle);Consume: 15 MP ;
+Culter;A knife glyph.;Glyph (Knife);Attrib: Slash;ATK +3;Find: Monastery;Consume: 8 MP ;Effect: Knife Throw
+Vol Culter;A double knife glyph.;Glyph (Knife);Attrib: Slash;ATK +3;Drop: Red Smasher;Consume: 16 MP ;Effect: Double Knife (parallel)
+Melio Culter;A triple knife glyph.;Glyph (Knife);Attrib: Slash;ATK +3;Find: Arms Depot (Dracula's Castle);Consume: 24 MP ;Effect: Triple Knife (parallel)
+Scutum;A shield glyph.;Glyph (Shield);No Attrib;No stats;Find: Kalidus Channel;Consume: 5 MP ;Effect: Blocks/reduces damage
+Vol Scutum;A powerful shield glyph.;Glyph (Shield);;No stats;Drop: Lizardman;Consume: 5 MP ;Effect: Blocks/reduces damage
+Melio Scutum;Superior shield glyph.;Glyph (Shield);;No stats;Find: Arms Depot (Dracula's Castle);Consume: 5 MP ;Effect: Blocks/reduces damage
+Redire;A glyph to magnetize blades for additional effect.;Glyph;Attrib: Slash;ATK +10;Find: Training Hall;Consume: 10 MP ;
+Cubus;A glyph that creates stones.;Glyph;Attrib: Stone;ATK +5;Find: Monastery;Consume: 20 MP ;
+Torpor;A glyph that incapacitates opponents.;Glyph;Attrib: Ice;ATK +10;Find: Wygol Village (...);Consume: 20 MP ;
+Lapiste;Pulverize enemies with giant fists of stone.;Glyph;Attrib: Strike;ATK +17;Find: Underground Labyrinth (Dracula's Castle);Consume: 20 MP ;
+Pneuma;This glyph creates squalls to sweep enemies away.;Glyph;Attrib: Slash;ATK +14;Find: Tymeo Mountains;Consume: 25 MP ;
+Ignis;Call forth burning flames.;Glyph;Attrib: Flame;ATK +9;Find: Tristis Pass, Drop: Fire Demon;Consume: 25 MP ;
+Vol Ignis;Create pillars of fire.;Glyph;Attrib: Flame;ATK +7;Find: Underground Labyrinth (Dracula's Castle);Consume: 40 MP ;
+Grando;Call forth freezing ice.;Glyph;Attrib: Ice;ATK +8;Steal: Sea Demon;Consume: 25 MP ;
+Vol Grando;Create pillars of ice.;Glyph;Attrib: Ice;ATK +27;Find: Tristis Pass;Consume: 40 MP ;
+Fulgur;Summon a ball of lightning.;Glyph;Attrib: Thunder;ATK +5;Steal: Thunder Demon;Consume: 25 MP ;
+Vol Fulgur;Call forth shocking electricity.;Glyph;Attrib: Thunder;ATK +3;Find: Minera Prison Island;Consume: 40 MP ;
+Luminatio (Luminare) - ;Call forth a ball of light.;Glyph;Attrib: Light;ATK +8;Find: Lighthouse;Consume: 25 MP ;
+Vol Luminatio;Call a ball of light that tracks enemies.;Glyph;Attrib: Light;ATK +20;Steal: White Fomor;Consume: 40 MP ;
+Umbra;Command the malice of the dead.;Glyph;Attrib: Darkness;ATK +13;Steal: Black Fomor;Consume: 25 MP ;
+Vol Umbra;Command the powers of darkness.;Glyph;Attrib: Darkness;ATK +23;Find: Mystery Manor;Consume: 40 MP ;
+Morbus;Command a forbidden curse.;Glyph;Attrib: Curse;ATK +12;Find: Mechanical Tower (Dracula's Castle);Consume: 25 MP ;
+Nitesco;Concentrate magic energy into a destructive beam.;Glyph;Attrib: Flame, Light;ATK +9;Steal: Nova Skeleton;Consume: 20 MP ;
+Acerbatus;Calls forth the power of spite.;Glyph;Attrib: Thunder, Darkness, Curse;ATK +22;Find: Mystery Manor, Steal: Albus;Consume: 44 MP ;Effect: Curse
+Globus;Unleash an energy sphere.;Glyph;Attrib: Strike;ATK +8;Steal: Barlowe, Demon Lord;Consume: 50 MP ;
+Dextro Custos;Attack with the right head of Cerberus, guardian of Hell.;Glyph;Attrib: Slash;ATK +18;Find: Library (Dracula's Castle);Consume: 16 MP ;
+Sinestro Custos;Attack with the left head of Cerberus, guardian of Hell.;Glyph;Attrib: Slash;ATK +18;Find: Mechanical Tower (Dracula's Castle);Consume: 16 MP ;
+Dominus Hatred (Dominus Odium) - ;"One piece of Dominus; summons a pillar of light.";Glyph;Attrib: Darkness;ATK +66;Find: Minera Prison Island;Consume: 1/6 of Max HP, 66 MP ;Effect: Loses health.
+Dominus Anger (Dominus Ira) - ;"One piece of Dominus; unleashes a cluster of energy.";Glyph;Attrib: Darkness;ATK +66;Find: Giant's Dwelling;Consume: 1/6 of Max HP, 66 MP ;Effect: Loses health.
+Magnes (Circulus) - ;Create an attractive magnetic field.;Back Glyph;Attrib: Light;ATK =10;Find: Monastery;Consume: 5 MP ;Effect: Allows Shanoa to propel herself through magnetic discs.
+Paries;Pass through solid walls in specific locations.;Back Glyph;;;Steal: Wallman;Consume: 5 MP ;Effect: Allows passage through wall portals.
+Volaticus;Conjures a pair of wings, allowing the power of flight.;Back Glyph;;;Find: Final Approach (Dracula's Castle);Consume: 20 MP ;Effect: Allows flight.
+Rapidus Fio;A glyph of divine motion that enables faster movement.;Back Glyph;Attrib: Slash;ATK +3;Find: Underground Labyrinth (Dracula's Castle);Consume: 80 MP ;Effect: Increases movement speed.
+Vis Fio;Temporarily increase STR and the effects of physical glyphs.;Back Glyph;;;Find: Mechanical Tower (Dracula's Castle);Consume: 80 MP ;Effect: STR boost.
+Fortis Fio;Temporarily increase CON and physical resistance.;Back Glyph;;;Find: Kalidus Channel;Consume: 80 MP ;Effect: CON boost.
+Sapiens Fio;Temporarily increase INT and the effects of magical glyphs.;Back Glyph;;;Find: Oblivion Ridge;Consume: 80 MP ;Effect: INT boost.
+Fides Fio;Temporarily increase MIND and magic resistance.;Back Glyph;;;Find: Tristis Pass;Consume: 80 MP ;Effect: MND boost.
+Felicem Fio;Grants the user a temporary boost of LUCK.;Back Glyph;;;Find: Underground Labyrinth (Dracula's Castle);Consume: 80 MP ;Effect: LCK boost.
+Inire Pecunia;Temporarily increase the amount of money received by enemies.;Back Glyph;;;Find: Tristis Pass;Consume: 80 MP ;Effect: Increases Gold received from enemies.
+Arma Felix;Grants cat-like abilities.;Back Glyph;;;Drop: Black Panther;Consume: 80 MP ;Effect: Transforms Shanoa into a werecat. She can attack with claw-swipes and rapid tail-whips, both at the cost of MP. Special: Shanoa is able to talk to the cats in Wygol Village. Black Panthers and Ladycats become allies.
+Arma Chiroptera;Grants bat-like abilities.;Back Glyph;;;Drop: Werebat;Consume: 80 MP ;Effect: Transforms Shanoa into a Lady Bat. Special: When Shanoa hits an enemy with a kick, she regains 1 HP for each time it hits.
+Arma Machina;Grants every ability of an automaton.;Back Glyph;;;Drop: Automaton ZX27;Consume: 80 MP ;Effect: Transforms Shanoa into an automaton. Special: Can break spikes upon contact.
+Refectio;Increases the rate of physical regeneration.;Back Glyph;;;Find: Library (Dracula's Castle);Consume: 80 MP ;Effect: Regenerates HP.
+Arma Custos;Grants the mighty power of Cerberus.;Back Glyph;;;Find: Arms Depot (Dracula's Castle);Consume: 80 MP ;Effect: Increases Shanoa's STR while active and the stat boost rises each time her HP decreases. Special: If all Custos glyphs are equipped at once, the stat boost from Arma Custos increases by 50%, and the damage dealt by Sinestro Custos and Dextro Custos also increase slightly.
+Fidelis Caries;Summon zombies that fight to the death.;Back Glyph;Attrib: Strike;ATK +2;Steal: Necromancer;Consume: 80 MP ;Effect: Summons Zombies.
+Fidelis Alate;Summon guardians to glide down from above.;Back Glyph;Attrib: Slash;ATK +3;Drop: Winged Skeleton;Consume: 80 MP ;Effect: Summons Winged Skeletons.
+Fidelis Polkir;Summon Polkir to descend on your enemies.;Back Glyph;Attrib: Flame;ATK +4;Drop: Polkir;Consume: 80 MP ;Effect: Summons Polkir.
+Fidelis Noctua;Summon owls to soundlessly descend.;Back Glyph;Attrib: Slash;ATK +3;Drop: Owl;Consume: 80 MP ;Effect: Summons an Owl.
+Fidelis Medusa;Summon Medusa Heads in a strangely familiar pattern.;Back Glyph;Attrib: Stone;ATK +1;Drop: Gorgon Head;Consume: 80 MP ;Effect: Summons Medusa Heads.
+Fidelis Aranea;Summon skull spiders to skitter about when needed.;Back Glyph;Attrib: Slash, Poison;ATK +2;Drop: Skull Spider;Consume: 80 MP ;Effect: Summons Skull Spiders. Special: Poisons enemies.
+Fidelis Mortus;Summon a lively assortment of the dead.;Back Glyph;Attrib: Strike, Curse;ATK +5;Drop: Jiang Shi;Consume: 80 MP ;Effect: Summons Jiang Shi. Special: Curses enemies.
+Dominus Agony (Dominus Angor) - ;"One piece of Dominus; shrouds you in Dracula's magic.";Back Glyph;;STR +66, CON +66, INT +66, MND +66;Find: Mystery Manor;Consume: 66 HP/s ;Effect: Boosts Shanoa's stats but drains her HP.
