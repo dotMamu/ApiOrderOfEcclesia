@@ -32,6 +32,8 @@ class WeaponDetailView(APIView):
         if weapon:
             serializer = WeaponSerializer(weapon)
             return Response(serializer.data, status.HTTP_200_OK)
+        else:
+            return Response({"message":"Weapon not found"},status.HTTP_404_NOT_FOUND)
 
 
 class GlyphUnionView(APIView):
@@ -63,7 +65,7 @@ class GlyphUnionView(APIView):
                     slot2 = self.get_weapon(request.GET["slot2"])
                     if slot1 == None or slot2 == None:
                         return Response(
-                            {"message": "Invalid Combination 1"},
+                            {"message": "Invalid Combination"},
                             status=status.HTTP_400_BAD_REQUEST,
                         )
                     union = GlyphUnion.objects.get(slot1=slot1.name, slot2=slot2.name,back="Dominus Agony")
@@ -84,7 +86,7 @@ class GlyphUnionView(APIView):
                         return Response(serializer.data, status=status.HTTP_200_OK)
                     except:
                         return Response(
-                            {"message": "Invalid Combination"},
+                            {"message": "Invalid Combination. Pulsus."},
                             status=status.HTTP_400_BAD_REQUEST,
                         )
 
@@ -94,7 +96,7 @@ class GlyphUnionView(APIView):
                 slot2 = self.get_weapon(request.GET["slot2"])
                 if slot1 == None or slot2 == None:
                     return Response(
-                        {"message": "Invalid Combination"},
+                        {"message": "Invalid Combination. Pulsus."},
                         status=status.HTTP_400_BAD_REQUEST,
                     )
                 union = GlyphUnion.objects.get(slot1=slot1.type, slot2=slot2.type)
@@ -143,7 +145,7 @@ class GlyphUnionView(APIView):
                             serializer = GlyphUnionSerializer(union)
                             return Response(serializer.data, status=status.HTTP_200_OK)
                         except:
-                            return Response({}, status=status.HTTP_400_BAD_REQUEST)
+                            return Response({"message": "Invalid Combination. Pulsus."}, status=status.HTTP_400_BAD_REQUEST)
                     
                    
         else:
