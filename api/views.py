@@ -1,54 +1,174 @@
-
-# importe para renderizar vistas, importado por defecto 
 from django.shortcuts import render
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
-# importes necesarios para respuesta
-from django.http.response import JsonResponse
-from django.views import View
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_exempt
-import json
-
-#importe de modelos necesarios
-from .models import *
+from .models import GlyphUnion, Weapon
+from .serializers import GlyphUnionSerializer, WeaponSerializer
 
 # Create your views here.
 
 
-class Weapons(View):
+class WeaponView(APIView):
+    def get(self, request):
+        weapons = Weapon.objects.all()
+        serializer = WeaponSerializer(weapons, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
-    @method_decorator(csrf_exempt) 
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
 
-    def get(self, request, name=''):
-        if name!='':
-            weapons = list(Weapon.objects.filter(name=name).values())
-            if len(weapons) > 0:
-                datos = {"message": "Success", "companies": weapons}
-            else:
-                datos = {"message": "An error ocurred"}
-            return JsonResponse(datos)
+class WeaponDetailView(APIView):
+    def get_object(self, name):
+        try:
+            return Weapon.objects.get(name=name)
+        except Weapon.DoesNotExist:
+            try:
+                return Weapon.objects.get(alias=name)
+            except:
+                return None
+
+    def get(self, request, name):
+        weapon = self.get_object(name)
+
+        if weapon:
+            serializer = WeaponSerializer(weapon)
+            return Response(serializer.data, status.HTTP_200_OK)
+
+
+class GlyphUnionView(APIView):
+    weapon_list = [
+        "Rapier",
+        "Sword",
+        "Hammer",
+        "Sickle",
+        "Axe",
+        "Lance",
+        "Knife",
+        "Arrow",
+    ]
+
+    def get_weapon(self, name):
+        try:
+            return Weapon.objects.get(name=name)
+        except Weapon.DoesNotExist:
+            try:
+                return Weapon.objects.get(alias=name)
+            except:
+                return None
+
+    def get(self, request):
+        if request.GET.get("back"):
+            if (str(request.GET["back"]).lower().__contains__("dominus")):
+                try:
+                    slot1 = self.get_weapon(request.GET["slot1"])
+                    slot2 = self.get_weapon(request.GET["slot2"])
+                    if slot1 == None or slot2 == None:
+                        return Response(
+                            {"message": "Invalid Combination 1"},
+                            status=status.HTTP_400_BAD_REQUEST,
+                        )
+                    union = GlyphUnion.objects.get(slot1=slot1.name, slot2=slot2.name,back="Dominus Agony")
+                    serializer = GlyphUnionSerializer(union)
+                    return Response(serializer.data, status=status.HTTP_200_OK)
+                except:
+                    try:
+                        slot1 = self.get_weapon(request.GET["slot2"])
+                        slot2 = self.get_weapon(request.GET["slot1"])
+                        
+                        if slot1 == None or slot2 == None:
+                            return Response(
+                                {"message": "Invalid Combination"},
+                                status=status.HTTP_400_BAD_REQUEST,
+                            )
+                        union = GlyphUnion.objects.get(slot1=slot1.name, slot2=slot2.name,back="Dominus Agony")
+                        serializer = GlyphUnionSerializer(union)
+                        return Response(serializer.data, status=status.HTTP_200_OK)
+                    except:
+                        return Response(
+                            {"message": "Invalid Combination"},
+                            status=status.HTTP_400_BAD_REQUEST,
+                        )
+
+        if request.GET:
+            try:
+                slot1 = self.get_weapon(request.GET["slot1"])
+                slot2 = self.get_weapon(request.GET["slot2"])
+                if slot1 == None or slot2 == None:
+                    return Response(
+                        {"message": "Invalid Combination"},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
+                union = GlyphUnion.objects.get(slot1=slot1.type, slot2=slot2.type)
+                serializer = GlyphUnionSerializer(union)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+
+            except:
+                try:
+                    slot1 = self.get_weapon(request.GET["slot2"])
+                    slot2 = self.get_weapon(request.GET["slot1"])
+                    union = GlyphUnion.objects.get(slot1=slot1.type, slot2=slot2.type)
+                    serializer = GlyphUnionSerializer(union)
+                    return Response(serializer.data, status=status.HTTP_200_OK)
+                except:
+                    try:
+                        if self.get_weapon(request.GET["slot1"]).type in self.weapon_list:
+                            slot1= "Weapon"
+                        else:
+                            slot1 = self.get_weapon(request.GET["slot1"]).type
+                        
+                        if self.get_weapon(request.GET["slot2"]).type in self.weapon_list:
+                            slot2= "Weapon"
+                        else:
+                            slot2 = self.get_weapon(request.GET["slot2"]).type
+
+                        union = GlyphUnion.objects.get(slot1=slot1, slot2=slot2)
+                        serializer = GlyphUnionSerializer(union)
+                        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
+                    except:
+
+                        try:
+                            if self.get_weapon(request.GET["slot2"]).type in self.weapon_list:
+                                slot1= "Weapon"
+                            else:
+                                slot1 = self.get_weapon(request.GET["slot2"]).type
+                            
+                            if self.get_weapon(request.GET["slot1"]).type in self.weapon_list:
+                                slot2= "Weapon"
+                            else:
+                                slot2 = self.get_weapon(request.GET["slot1"]).type
+
+                            union = GlyphUnion.objects.get(slot1=slot1, slot2=slot2)
+                            serializer = GlyphUnionSerializer(union)
+                            return Response(serializer.data, status=status.HTTP_200_OK)
+                        except:
+                            return Response({}, status=status.HTTP_400_BAD_REQUEST)
+                    
+                   
         else:
-            companies = list(Weapon.objects.values())
-            if len(companies) > 0:
-                datos = {"message": "Success", "companies": companies}
-            else:
-                datos = {"message": "Companies not found"}
-            return JsonResponse(datos)
-    
-
-    def post(self, request,item1,item2):
-        #print(request.body)
-        jd = json.loads(request.body)
-        #print(jd)
-        Weapon.objects.create(name=jd['name'], website=jd['website'], foundation=jd['foundation'])
-        datos = {"message": "Success"}
-        return JsonResponse(datos)
-
-class Glyph_Union(View):
-    def get(self, request, item1,item2):
-        
+            union = GlyphUnion.objects.all()
+            serializer = GlyphUnionSerializer(union, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-        pass
+class GlyphUnionDetailView(APIView):
+    def get_object(self, name):
+        try:
+            return GlyphUnion.objects.get(name=name)
+        except GlyphUnion.DoesNotExist:
+            try:
+                return GlyphUnion.objects.get(alias=name)
+            except:
+                return None
+
+    def get(self, request, name):
+        union = self.get_object(name)
+
+        if union:
+            serializer = GlyphUnionSerializer(union)
+            return Response(serializer.data, status.HTTP_200_OK)
+        else:
+            return Response(
+                {"Message": "Glyph Union Not Found"}, status.HTTP_404_NOT_FOUND
+            )
